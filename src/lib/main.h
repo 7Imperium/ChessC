@@ -13,7 +13,7 @@ typedef struct {
 void help(char **args);
 
 Command commands[] = {
-    {"help", help, 0, "Показывает все команды и их описание."},
-    {"exit", NULL, 0,"Выход из программы."},
+    {"help", help, 0, "Shows all commands and their description."},
+    {"exit", NULL, 0,"Exit the program."},
     {NULL, NULL}
 };
