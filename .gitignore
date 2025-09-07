@@ -1,0 +1,17 @@
+*.swp
+*~
+.idea/
+.vs/
+build/
+*.o
+*.a
+*.so
+*.log
+*.tmp
+*.out
+*.key
+*.pem
+config.json
+Thumbs.db
+ehthumbs.db
+Desktop.ini
