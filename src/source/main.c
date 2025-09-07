@@ -62,7 +62,7 @@ int main() {
     return 0;
 }
 
-void help(char **args) {
+void help() {
     for (int j = 0; commands[j].name != NULL; j++) {
         printf("%s - %s\n", commands[j].name, commands[j].discription);
     }

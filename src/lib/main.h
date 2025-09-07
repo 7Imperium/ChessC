@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <chess.h>
 
 #define MAX_INPUT_SIZE 256
 #define MAX_ARG 10
@@ -10,10 +11,11 @@ typedef struct {
     char *discription;
 } Command;
 
-void help(char **args);
+void help();
 
 Command commands[] = {
     {"help", help, 0, "Shows all commands and their description."},
+    {"print", printboard, 0, "Show board."},
     {"exit", NULL, 0,"Exit the program."},
-    {NULL, NULL}
+    {NULL, NULL, 0, NULL}
 };

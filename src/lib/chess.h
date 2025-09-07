@@ -1,0 +1,3 @@
+
+void printboard();
+int fillboard();
