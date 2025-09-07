@@ -1,15 +1,18 @@
-int create(int x, int y){
+int create(char **args){
     
 }
-int fill(){
+int fill(char **args){
 
 }
-int border(){
+int border(char **args){
 
 }
-int make(){
+int make(char **args){
 
 }
-int vectur2d(){
+int vectur2d(char **args){
+    
+}
+void FreeMemory(char **args){
     
 }

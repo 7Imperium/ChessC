@@ -6,14 +6,14 @@
 int main() {
     char input[MAX_INPUT_SIZE];
     char *args[MAX_ARG];
-    printf("Введите help для просмотра всех команд.\n");
+    printf("Type help to see all commands.\n");
 
     while (1) {
         printf("> ");
 
         if (fgets(input, sizeof(input), stdin) == NULL) { //CTRL + D
             //FreeMemory(NULL);
-            printf("Ошибка чтения ввода или конец файла.\n");
+            printf("Error reading input or end of file.\n");
             break;
         }
 
@@ -52,17 +52,17 @@ int main() {
 
         if (! found && strcmp(command_name, "exit") == 0) {
             //FreeMemory(NULL);
-            printf("Выход из программы.\n");
+            printf("Exit the program.\n");
             break;
         } else if (!found) {
-            printf("Неизвестная команда: %s\n", command_name);
+            printf("Unknown command: %s\n", command_name);
         }
     }
 
     return 0;
 }
 
-void help(char **args) {
+void help() {
     for (int j = 0; commands[j].name != NULL; j++) {
         printf("%s - %s\n", commands[j].name, commands[j].discription);
     }
