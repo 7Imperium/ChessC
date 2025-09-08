@@ -3,19 +3,30 @@
 #include <windowCMD.h>
 
 Window *fld;
+int X;
+int Y;
 
 void create(char **args){
-   fld = (Window*)malloc(atoi(args[0]) * atoi(args[1]) * sizeof(int));
-   fld->X = atoi(args[0]);
-   fld->Y = atoi(args[1]);
-
+   fld = (Window*)malloc(atoi(args[0]) * atoi(args[1]) * sizeof(Window));
+   X = atoi(args[1]);
+   Y = atoi(args[0]);
+   for(int ngX = 0; ngX < X; ngX++){
+    for(int ngY = 0; ngY < Y; ngY++){
+        fld[(X*ngX)+ngY].counter = 0;
+    }
+   }
 }
 
 void list(){
-    for(int ngX = 0; ngX <= fld->X; ngX++){
-        for(int ngY = 0; ngY <= fld->Y; ngY++){
-
+    if(fld != NULL){
+        for(int ngX = 0; ngX < X; ngX++){
+            for(int ngY = 0; ngY < Y; ngY++){
+                printf("%d", fld[(X*ngX)+ngY].counter);
+            }
+        printf("\n");
         }
+    }else{
+        printf("Memory is NULL\n");
     }
 }
 //int fill(char **args){}

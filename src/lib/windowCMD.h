@@ -1,7 +1,7 @@
 typedef struct Wind
 {
-    int X;
-    int Y;
+    int counter;
+    int upper;
 } Window;
 extern Window *fld;
 void create(char **args);
