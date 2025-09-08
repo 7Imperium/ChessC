@@ -12,7 +12,7 @@ int main() {
         printf("> ");
 
         if (fgets(input, sizeof(input), stdin) == NULL) { //CTRL + D
-            //FreeMemory(NULL);
+            FreeMemory(NULL);
             printf("Error reading input or end of file.\n");
             break;
         }
@@ -51,7 +51,7 @@ int main() {
         }
 
         if (! found && strcmp(command_name, "exit") == 0) {
-            //FreeMemory(NULL);
+            FreeMemory(NULL);
             printf("Exit the program.\n");
             break;
         } else if (!found) {
